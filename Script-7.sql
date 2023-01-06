@@ -1,9 +1,8 @@
 select name, yea from album
 where yea >= '2018-01-01' and yea <= '2018-12-31';
 
-select name, duration from track
-order by duration desc 
-limit 1;
+SELECT name, duration FROM track WHERE 
+    duration = (SELECT MAX(duration) FROM track);
 
 
 select name from track
@@ -18,5 +17,5 @@ where name not like '% %';
 
 
 select name from track
-where name in ('my', 'мой');
+where name ilike '%олег%' or name ilike '%hello%';
 
