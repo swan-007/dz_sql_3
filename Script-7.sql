@@ -17,5 +17,5 @@ where name not like '% %';
 
 
 select name from track
-where name ilike '%олег%' or name ilike '%hello%';
+where name ilike '%мой%' or name ilike '%my%';
 
